@@ -7,7 +7,7 @@ ruby '3.0.2'
 
 gem 'rails'
 
-#gem 'active_storage'
+# gem 'active_storage'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 
