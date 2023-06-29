@@ -49,6 +49,7 @@
 ### Key Features <a name="key-features"></a>
 
 - Creating a data model.
+- Processing data in models
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
