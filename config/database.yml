@@ -63,7 +63,13 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: blog_app_test
+  adapter: postgresql
+  encoding: unicode
+  database: blog_app
+  pool: 5
+  username: postgres
+  password: MyPassword
+  host: localHost
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
