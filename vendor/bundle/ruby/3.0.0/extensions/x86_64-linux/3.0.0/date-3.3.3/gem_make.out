@@ -1,0 +1,21 @@
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230630-67839-i3uej0.rb extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+make DESTDIR\= clean
+
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+make DESTDIR\=
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20230630-67839-9h75b9

@@ -1,0 +1,13 @@
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/json-2.6.3/ext/json
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230630-67839-zhauzr.rb extconf.rb
+creating Makefile
+
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/json-2.6.3/ext/json
+make DESTDIR\= clean
+
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/json-2.6.3/ext/json
+make DESTDIR\=
+make: Nothing to be done for 'all'.
+
+current directory: /home/mourene/study_repos/blog_app/vendor/bundle/ruby/3.0.0/gems/json-2.6.3/ext/json
+make DESTDIR\= install
