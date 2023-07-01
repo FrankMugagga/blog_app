@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
 
-  it "Should be invalid without a name" do
+  it 'Should be invalid without a name' do
     user = User.new(posts_counter: 2)
     expect(user).to be_invalid
     expect(user.errors[:Name]).to include("can't be blank")
@@ -25,8 +25,6 @@ RSpec.describe User, type: :model do
   it 'Should return the most recent post' do
     user = User.create(Name: 'Lumbuye', posts_counter: 2)
 
-    post = user.posts.create(title: 'Post1', text: 'content 1', comments_counter: 1, likes_counter: 1)
-    post2 = user.posts.create(title: 'Post2a', text: 'content 2a', comments_counter: 12, likes_counter: 12)
     post2 = user.posts.create(title: 'Post2', text: 'content 2', comments_counter: 2, likes_counter: 2)
     post3 = user.posts.create(title: 'Post3', text: 'content 3', comments_counter: 3, likes_counter: 3)
     post4 = user.posts.create(title: 'Post4', text: 'content 4', comments_counter: 4, likes_counter: 4)
