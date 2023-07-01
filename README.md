@@ -9,7 +9,7 @@
 
 | Project Veiw Screenshots|
 |---------------------------------------|
-<div align="center"><img src="./storage/blog_appERD.png" alt="screenshot" width="auto" height="auto"/></div>|
+<div align="center"><img src="./app/assets/images/blog_appERD.png" alt="screenshot" width="auto" height="auto"/></div>|
 
 # 📗 Table of Contents
 
@@ -50,6 +50,7 @@
 
 - Creating a data model.
 - Processing data in models
+- Validations and Model specs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +111,7 @@ GitHub: [@githubhandle](https://www.github.com/FrankMugagga)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Validations and Model specs]**
+- [ ] **[implement view]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
