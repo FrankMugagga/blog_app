@@ -9,7 +9,7 @@
 
 | Project Veiw Screenshots|
 |---------------------------------------|
-<div align="center"><img src="./storage/blog_appERD.png" alt="screenshot" width="auto" height="auto"/></div>|
+<div align="center"><img src="./app/assets/images/blog_appERD.png" alt="screenshot" width="auto" height="auto"/></div>|
 
 # 📗 Table of Contents
 
