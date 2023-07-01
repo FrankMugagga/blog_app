@@ -10,14 +10,14 @@ RSpec.describe Like, type: :model do
   end
 
   describe '#update_like_counter' do
-  user = User.create(Name: 'Lumbuye', posts_counter: 2)
+    user = User.create(Name: 'Lumbuye', posts_counter: 2)
 
     post = user.posts.create(title: 'Post2', text: 'content 2', comments_counter: 2, likes_counter: 2)
 
-  it 'updates the likes_counter of the associated post' do
-    like = Like.create(author_id: user.id, post_id: post.id)
+    it 'updates the likes_counter of the associated post' do
+      like = Like.create(author_id: user.id, post_id: post.id)
 
-    expect { like.send(:update_like_counter) }.to change { post.reload.likes_counter }.by(1)
+      expect { like.send(:update_like_counter) }.to change { post.reload.likes_counter }.by(1)
+    end
   end
-end
 end

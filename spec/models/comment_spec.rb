@@ -14,6 +14,5 @@ RSpec.describe Comment, type: :model do
       comment = Comment.create(post: post, text: 'Some comment')
       expect { comment.decrement_comment_counter }.to change { post.reload.comments_counter }.by(-1)
     end
-    
   end
 end
