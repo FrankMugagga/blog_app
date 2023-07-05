@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     before do
-      user = User.create(Name: 'Lumbuye', posts_counter: 2)      
-      get "/users/#{user.id}/posts"      
+      user = User.create(Name: 'Lumbuye', posts_counter: 2)
+      get "/users/#{user.id}/posts"
     end
 
     it 'returns http success' do
@@ -27,7 +27,7 @@ RSpec.describe 'Posts', type: :request do
       get "/users/#{user.id}/posts/#{post.id}"
     end
 
-    it 'Returns http success' do      
+    it 'Returns http success' do
       expect(response).to have_http_status(:success)
     end
 

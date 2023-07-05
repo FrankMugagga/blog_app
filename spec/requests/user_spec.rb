@@ -1,15 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-
   describe 'GET /index' do
-
     before do
       get '/user/index'
     end
 
-    it 'returns http success' do      
-      expect(response).to have_http_status(:success)      
+    it 'returns http success' do
+      expect(response).to have_http_status(:success)
     end
 
     it 'renders the index template ' do
@@ -24,7 +22,7 @@ RSpec.describe 'Users', type: :request do
   describe 'GET /show' do
     before do
       user = User.create(Name: 'Lumbuye', posts_counter: 2)
-      get "/user/show", params: { id: user.id } 
+      get '/user/show', params: { id: user.id }
     end
     it 'returns http success' do
       expect(response).to have_http_status(:success)
@@ -38,5 +36,4 @@ RSpec.describe 'Users', type: :request do
       expect(response.body).to include('User profile')
     end
   end
-  
 end
