@@ -52,6 +52,7 @@
 - Processing data in models
 - Validations and Model specs
 - Routes, controllers and views
+- controllers specs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,7 +113,7 @@ GitHub: [@githubhandle](https://www.github.com/FrankMugagga)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Controller specs]**
+- [ ] **[Views]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
