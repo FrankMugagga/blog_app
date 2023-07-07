@@ -1,1 +1,18 @@
 <h1>Post details</h1>
+<div class='post_detail'>
+  <div>
+   <div>
+     <div>Post <%= @post.id %> by <%= @post.author.Name %></div>
+     <div>
+       <div>Comments: <%=@post.comments_counter %></div>
+       <div>Likes: <%=@post.likes_counter %></div>
+     </div>
+   </div>
+   <div class='post_text'>
+     <%= @post.text %>
+   </div>
+  <div>
+  <% commentpost = @post.comments %>
+    <%= render partial: 'partials/comment', locals: { comment: commentpost }%>
+ 
+</div>
