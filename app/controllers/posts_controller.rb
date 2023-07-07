@@ -1,7 +1,7 @@
-class PostController < ApplicationController
+class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @post = @user.Post
+    @post = @user.posts
 
     render :index
   end

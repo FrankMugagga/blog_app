@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     expect(user).to be_invalid
     expect(user.errors[:Name]).to include("can't be blank")
   end
-  it 'Sould be invalid if less than zero' do
+  it 'Should be invalid if less than zero' do
     user = User.new(Name: 'Me', posts_counter: -1)
     expect(user).to be_invalid
     expect(user.errors[:posts_counter]).to include('must be greater than or equal to 0')
