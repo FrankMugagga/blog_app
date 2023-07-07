@@ -14,56 +14,53 @@
  *= require_self
  */
 
- .user_list {
-    list-style: none;
- }
+.user_list {
+  list-style: none;
+}
 
- .user_list_item {
-    display:flex;
- }
+.user_list_item {
+  display: flex;
+}
 
- .user_index {
-    display: flex;
- }
+.user_index {
+  display: flex;
+}
 
- .user_image {
-    width: 120px;
-    height: 120px;
-    margin-top: 10px;
-    margin-right: 10px;
- }
+.user_image {
+  width: 120px;
+  height: 120px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
 
- .index_user {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
-    border: 2px solid red;
-    height: 115px;
-    width: 30rem;
-    margin-top: 10px;
- }
+.index_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  border: 2px solid red;
+  height: 115px;
+  width: 30rem;
+  margin-top: 10px;
+}
 
- .user_name {
-    height: 60%;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
- }
+.user_name {
+  height: 60%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
 
- .user_posts_count {
-    font-size: 20px;
-    height: 40%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px;
- }
+.user_posts_count {
+  font-size: 20px;
+  height: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
 
- a {
-    text-decoration: none;
- }
-
- .comments_cont {
- }
+a {
+  text-decoration: none;
+}
