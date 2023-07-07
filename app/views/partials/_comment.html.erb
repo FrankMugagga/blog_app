@@ -1,0 +1,11 @@
+<% if comment.present? %>
+  <div class='comments_cont'>
+    <% comment.each do |c| %>
+      <p class='comment_text'>
+        <%= c.user.Name %>: <%= c.text %><br>
+      </p>
+    <% end %>
+  </div>
+<% else %>
+  <p>No comments available</p>
+<% end %>
