@@ -54,6 +54,7 @@
 - Routes, controllers and views
 - controllers specs
 - views
+- Add forms
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
