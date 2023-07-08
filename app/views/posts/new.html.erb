@@ -1,0 +1,22 @@
+<h1>Create a new post</h1>
+<%= form_with model: @post, url: user_posts_path(@user), method: :post do |f| %>
+
+  <div class='post_input'>
+    <div class='input_field'>
+      <%= f.label :title %>
+      <%= f.text_field :title, required: true, class: 'post_title', placeholder: 'Add title here' %>
+    </div>
+    <div class='input_field'>
+      <%= f.label :text %>
+      <%= f.text_area :text, required: true, class: 'post_text', placeholder: 'Write your text ...' %>
+    </div>
+    <%= f.submit 'Create Post' %>
+  </div>
+
+  <% if flash[:error] %>
+  <div class=''error-message>
+    <%= flash[:error] %>
+    
+  </div>
+  <% end %>
+<% end %>
