@@ -53,6 +53,7 @@
 - Validations and Model specs
 - Routes, controllers and views
 - controllers specs
+- views
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

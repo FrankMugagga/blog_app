@@ -1,0 +1,18 @@
+
+<a href='/users/<%= @user.id %>/posts/<%= post.id %>'class='post_cont'>
+  <h2 class='post_id'>
+    Post <%= post.id %>
+  </h2>
+  <div class='post_text'>
+    Post Text:<%= post.text %>
+  </div>
+
+  <div class='comment_like'>
+    <div class='comment'>
+      Comments: <%= post.comments_counter %>
+    </div>
+    <div class='like'>
+      Likes: <%= post.likes_counter%>
+    </div>
+  </div>
+</a>

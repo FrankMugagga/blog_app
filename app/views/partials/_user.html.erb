@@ -1,0 +1,19 @@
+<div class='user_index'>
+  <% if user.Photo.present? %>
+    <div><img src="<%= user.Photo %>" alt="<%= user.Name %>" class='user_image'></div>
+  <% else %>
+    <div>No photo available</div>
+  <% end %> 
+
+  <a href='/users/<%= user.id %>' class='index_user' alt='last'>
+    <div class='user_name'>
+      <%= user.Name %>
+    </div>
+
+    <div class='user_posts_count'>
+      Number of posts: <%= user.posts_counter %>
+    </div>
+    
+  </a>  
+  
+</div>
