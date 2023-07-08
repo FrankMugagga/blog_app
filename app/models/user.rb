@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   has_many :posts, foreign_key: :author_id
   has_many :likes, foreign_key: 'author_id', dependent: :destroy

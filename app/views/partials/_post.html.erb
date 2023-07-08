@@ -17,11 +17,12 @@
   </div>
 
   
-  <%= form_with(model: @like, url: user_post_likes_path(user_id: @user.id, post_id: post.id), method: :post, remote: false) do |form| %>
-    <div class="add-coment-btn">
+  <%= form_with(model: @like, url: user_post_likes_path(user_id: @user.id, post_id: post.id), method: :post, remote: false, local: true) do |form| %>
+    <div class="add-comment-btn">
       <%= form.submit "Like" %>
     </div>
   <% end %>
+  
 
 
   <a href='/users/<%= @user.id %>/posts/<%= post.id %>'class='post_cont'>ADD POST </a>
