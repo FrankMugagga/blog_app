@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     @post.likes_counter = 0
 
     if @post.save
-      
+
       redirect_to user_posts_path, notice: 'Post saved successfully'
     else
       flash.now[:error] = @post.errors.full_messages.to_sentence
