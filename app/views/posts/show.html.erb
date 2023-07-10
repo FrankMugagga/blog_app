@@ -12,7 +12,10 @@
      <%= @post.text %>
    </div>
   <div>
+  
   <% commentpost = @post.comments %>
     <%= render partial: 'partials/comment', locals: { comment: commentpost }%>
- 
+  
+  <a href='/users/<%= @user.id %>/posts/new'>CREATE POST</a>
+  
 </div>
