@@ -54,6 +54,7 @@
 - Routes, controllers and views
 - controllers specs
 - views
+- integration specs for views and fix n+1 problems
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +115,7 @@ GitHub: [@githubhandle](https://www.github.com/FrankMugagga)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Views]**
+- [ ] **[add devise]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
