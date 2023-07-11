@@ -5,9 +5,11 @@ require 'capybara/rspec'
 RSpec.describe 'User', type: :view do
   include Capybara::DSL
   before do
+    @user = User.create(Name: 'Jot', Photo: 'john.png', Bio: 'from Hungary', posts_counter: 1)
     @user1 = User.create(Name: 'Johnt', Photo: 'john.png', Bio: 'from Hungary', posts_counter: 1)
     @user2 = User.create(Name: 'Dee', Photo: 'dee.png', Bio: 'uganda', posts_counter: 2)
     @post1 = @user1.posts.create(text: 'Post 1', comments_counter: 0, likes_counter: 0)
+    @post = Post.create(author_id: @user.id, title: 'Test Post', text: 'text body', comments_counter: 1, likes_counter: 1)
   end
 
   describe 'index page' do
@@ -76,6 +78,13 @@ RSpec.describe 'User', type: :view do
 
     it "I can see a button that lets me view all of a user's posts." do
       expect(page).to have_link('See more posts', href: user_posts_path(@user2))
+    end
+
+    it "When I click on a post, it redirects me to that post's show page." do
+      visit user_posts_path(@user)
+      click_on 'text body'
+      visit user_post_path(@user.id, @post.id)
+      page.has_content?(@post.title)    
     end
     
     it "When I click to see all posts, it redirects me to the user's post's index page." do
