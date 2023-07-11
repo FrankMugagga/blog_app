@@ -36,5 +36,10 @@ RSpec.describe 'User', type: :view do
   end
 
   describe 'user show page' do
+    it "Should see the user's profile picture" do
+      visit user_path
+      page.has_content?(@user1.Photo)
+      expect(page).to have_css("img[src*='john.png']")
+    end
   end
 end
