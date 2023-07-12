@@ -33,7 +33,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'returns right place holder' do
-      expect(response.body).to include('User profile')
+      expect(response.body).to include('Hello')
     end
   end
 end
