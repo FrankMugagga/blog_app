@@ -57,9 +57,9 @@ RSpec.describe 'post/index.html.erb', type: :view do
   end
 
   it 'I can see a section for pagination if there are more posts than fit on the view.' do
-      visit user_posts_path(@user)
-      expect(page).to have_button('PAGINATION')
-    end
+    visit user_posts_path(@user)
+    expect(page).to have_button('PAGINATION')
+  end
 
   it "When I click on a post, it redirects me to that post's show page." do
     visit user_posts_path(@user)

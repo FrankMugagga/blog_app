@@ -10,7 +10,7 @@ RSpec.describe 'User', type: :view do
     @user2 = User.create(Name: 'Dee', Photo: 'dee.png', Bio: 'uganda', posts_counter: 2)
     @post1 = @user1.posts.create(text: 'Post 1', comments_counter: 0, likes_counter: 0)
     @post = Post.create(author_id: @user.id, title: 'Test Post', text: 'text body', comments_counter: 1,
-    likes_counter: 1)
+                        likes_counter: 1)
   end
 
   describe 'index page' do
