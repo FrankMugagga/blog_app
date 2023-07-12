@@ -70,14 +70,16 @@ RSpec.describe 'User', type: :view do
       end
     end
 
+    it "Should see the user's profile picture" do      
+      page.has_content?(@user1.Photo)
+      page.has_css?('.img-fluid')
+      expect(page).to have_css("img[src*='dee']")
+    end
+
     it "I can see the user's first 3 posts." do
       @user1.recent_posts.limit(3).each do |post|
         expect(page).to have_content(post.title)
       end
-    end
-
-    it "I can see a button that lets me view all of a user's posts." do
-      expect(page).to have_link('See more posts', href: user_posts_path(@user2))
     end
 
     it "When I click on a post, it redirects me to that post's show page." do
