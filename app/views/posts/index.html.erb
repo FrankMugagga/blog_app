@@ -2,11 +2,13 @@
 <div class='post_index'>
   <%= render partial: 'partials/user', locals: { user: @user } %>
   
-  <% @post.each do |post| %>
+  <% Post.includes(:comments).each do |post| %>
     <%= render partial: 'partials/post', locals: { post: post } %>
     
     <% commentp = post.five_recent_comments %>    
     <%= render partial: 'partials/comment', locals: { comment: commentp } %>
     
   <% end %>
+
+  <button type="button" class="btn btn-outline-dark">PAGINATION</button>
 </div>
