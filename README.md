@@ -54,7 +54,11 @@
 - Routes, controllers and views
 - controllers specs
 - views
+- Add forms
 - integration specs for views and fix n+1 problems
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,7 +110,7 @@ Clone this repository to your desired folder:
 
 👤 **Frank Mugagga**
 
-GitHub: [@githubhandle](https://www.github.com/FrankMugagga)
+- GitHub: [@githubhandle](https://www.github.com/FrankMugagga)
 - Twitter: [@twitterhandle](https://www.twitter.com/@mugagga_frank)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/frank-mugagga)
 
