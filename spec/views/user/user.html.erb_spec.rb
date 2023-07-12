@@ -9,7 +9,8 @@ RSpec.describe 'User', type: :view do
     @user1 = User.create(Name: 'Johnt', Photo: 'john.png', Bio: 'from Hungary', posts_counter: 1)
     @user2 = User.create(Name: 'Dee', Photo: 'dee.png', Bio: 'uganda', posts_counter: 2)
     @post1 = @user1.posts.create(text: 'Post 1', comments_counter: 0, likes_counter: 0)
-    @post = Post.create(author_id: @user.id, title: 'Test Post', text: 'text body', comments_counter: 1, likes_counter: 1)
+    @post = Post.create(author_id: @user.id, title: 'Test Post', text: 'text body', comments_counter: 1,
+                        likes_counter: 1)
   end
 
   describe 'index page' do
@@ -39,13 +40,12 @@ RSpec.describe 'User', type: :view do
   end
 
   describe 'user show page' do
-
     before do
       visit user_path(@user1.id)
       visit user_path(@user2.id)
     end
 
-    it "Should see the user's profile picture" do      
+    it "Should see the user's profile picture" do
       page.has_content?(@user1.Photo)
       page.has_css?('.img-fluid')
       expect(page).to have_css("img[src*='dee']")
@@ -61,7 +61,7 @@ RSpec.describe 'User', type: :view do
       expect(page).to have_content(@user2.posts_counter)
     end
 
-    it "I can see the user's bio." do 
+    it "I can see the user's bio." do
       page.has_css?('user_bio')
       if @user2.Bio.present?
         expect(page).to have_content(@user2.Bio)
@@ -84,9 +84,9 @@ RSpec.describe 'User', type: :view do
       visit user_posts_path(@user)
       click_on 'text body'
       visit user_post_path(@user.id, @post.id)
-      page.has_content?(@post.title)    
+      page.has_content?(@post.title)
     end
-    
+
     it "When I click to see all posts, it redirects me to the user's post's index page." do
       click_link 'See more posts'
       expect(page).to have_current_path(user_posts_path(@user2))

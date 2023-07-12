@@ -7,7 +7,8 @@ RSpec.describe 'post/index.html.erb', type: :view do
 
   before do
     @user = User.create(Name: 'John Doe', Photo: 'example.jpg', Bio: 'From Guinea', posts_counter: 3)
-    @post = Post.create(author_id: @user.id, title: 'Test Post', text: 'text body', comments_counter: 1, likes_counter: 1)
+    @post = Post.create(author_id: @user.id, title: 'Test Post', text: 'text body', comments_counter: 1,
+                        likes_counter: 1)
     @comment1 = Comment.create(author_id: @user.id, post_id: @post.id, text: 'Comment1')
     @comment2 = Comment.create(author_id: @user.id, post_id: @post.id, text: 'Comment2')
   end
@@ -59,7 +60,6 @@ RSpec.describe 'post/index.html.erb', type: :view do
     visit user_posts_path(@user)
     click_on 'text body'
     visit user_post_path(@user.id, @post.id)
-    page.has_content?(@post.title)    
+    page.has_content?(@post.title)
   end
-  
 end
