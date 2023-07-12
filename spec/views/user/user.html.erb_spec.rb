@@ -70,7 +70,7 @@ RSpec.describe 'User', type: :view do
       end
     end
 
-    it "Should see the user's profile picture" do      
+    it "Should see the user's profile picture" do
       page.has_content?(@user1.Photo)
       page.has_css?('.img-fluid')
       expect(page).to have_css("img[src*='dee']")
