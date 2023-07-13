@@ -3,6 +3,8 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="userloginfield">
+   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
     <%= f.label :email, style: 'display: none' %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'login_signup_field'  %>
   </div>
