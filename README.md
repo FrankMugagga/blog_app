@@ -52,10 +52,11 @@
 - Processing data in models
 - Validations and Model specs
 - Routes, controllers and views
-- controllers specs
-- views
+- Controllers specs
+- Views
 - Add forms
-- integration specs for views and fix n+1 problems
+- Integration specs for views and fix n+1 problems
+- Add devise
 
 
 
@@ -119,7 +120,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[add devise]**
+- [ ] **[add authorization rules]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
