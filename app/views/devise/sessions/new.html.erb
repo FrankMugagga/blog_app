@@ -1,16 +1,16 @@
-<section class="userlogin">
+<section class="signup_userlogin">
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="userloginfield">
     <%= f.label :email, style: 'display: none' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'userloginfield'  %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'login_signup_field'  %>
   </div>
   <br>
 
   <div class="userloginfield">
     <%= f.label :password, style: 'display: none' %><br />
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'userloginfield' %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password',class: 'login_signup_field' %>
   </div>
   <br><br>
 
@@ -23,9 +23,11 @@
   <br>
 
   <section class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: 'login_signup_btn'  %>
   </div>
-<% end %>
+<% end %> 
+<br>
+<br>
 
 <%= render "devise/shared/links" %>
 
