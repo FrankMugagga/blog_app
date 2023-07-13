@@ -5,8 +5,10 @@
   <% @users.each do |user| %>
     <li class='user_list_item'>
       <%= render partial: 'partials/user', locals: { user: user }  %>
-    </li>   
+    </li>
+    <br>
   <% end %>
+  
 </ul>
 
 
