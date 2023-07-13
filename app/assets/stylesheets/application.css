@@ -112,5 +112,8 @@ a {
   width: 90%;
   border: 2px solid grey;
   background: rgb(54, 54, 62);
+}
 
+.post_link {
+  color: red;
 }

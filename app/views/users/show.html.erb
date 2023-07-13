@@ -16,7 +16,7 @@
   <ul class=''>
     <% @user1 = User.find(@user.id) %>
     <% @user.recent_posts.each do |post| %>
-         <li>
+         <li class='post_cont'>
            <%= render partial: 'partials/post', locals: { post: post } %>
          </li>      
     <% end %>
