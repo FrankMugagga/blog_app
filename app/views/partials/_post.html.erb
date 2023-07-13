@@ -1,5 +1,5 @@
 
-<a href='/users/<%= @user.id %>/posts/<%= post.id %>'class='post_cont'>
+<a class='post_cont' href='/users/<%= @user.id %>/posts/<%= post.id %>'>
   <h2 class='post_id'>
     Post <%= post.id %>
   </h2>
@@ -18,7 +18,8 @@
       Likes: <%= post.likes_counter%>
     </div>
   </div>
-  <a href='/users/<%= @user.id %>/posts/<%= post.id %>/comments/new' class='post_cont'>Add Comment</a>
+</a>
+  <a href='/users/<%= @user.id %>/posts/<%= post.id %>/comments/new' class='add_comment'>Add Comment</a>
   
 
 
