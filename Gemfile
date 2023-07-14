@@ -9,6 +9,8 @@ gem 'rails'
 
 gem 'devise'
 
+gem 'cancancan'
+
 # gem 'active_storage'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
