@@ -112,7 +112,6 @@ a {
   color: rgb(114, 248, 248);
 }
 
-
 .create_post {
   border: 2px solid green;
 }
@@ -177,7 +176,7 @@ li {
   justify-content: space-between;
 }
 
-.postshow {  
+.postshow {
   background: rgb(54, 54, 62);
 }
 
