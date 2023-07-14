@@ -1,11 +1,14 @@
 <h1>List of all users</h1>
+<%= button_to "Logout", destroy_user_session_path, method: :delete %>
 
 <ul class='user_list'>
   <% @users.each do |user| %>
     <li class='user_list_item'>
       <%= render partial: 'partials/user', locals: { user: user }  %>
-    </li>   
+    </li>
+    <br>
   <% end %>
+  
 </ul>
 
 

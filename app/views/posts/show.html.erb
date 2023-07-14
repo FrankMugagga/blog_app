@@ -13,10 +13,16 @@
      <%= @post.text %>
    </div>
   <div>
+
+  <%= form_with url: user_post_likes_path(current_user, @post), method: :post do |form| %>
+    <%= form.hidden_field :authenticity_token, value: form_authenticity_token %>
+    <%= form.submit "Add Likes", class: 'btn_add_likes' %>
+<% end %>
   
   <% commentpost = @post.comments %>
-    <%= render partial: 'partials/comment', locals: { comment: commentpost }%>
-  
-  <a href='/users/<%= @user.id %>/posts/new'>CREATE POST</a>
+  <%= render partial: 'partials/comment', locals: { comment: commentpost }%>
+
+  <a href='/users/<%= @user.id %>/posts/<%= @post.id %>/comments/new' class='post_cont'>Add Comment</a>
+  <a href='/users/<%= @user.id %>/posts/new' class = 'create_post'>CREATE POST</a>
   
 </div>

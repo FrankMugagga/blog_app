@@ -1,22 +1,22 @@
 
 <h1>Hello <%= @user.Name %>' last three posts</h1>
 <div class='user_det'>
-  <%= render partial: 'partials/user', locals: { user: @user }  %>
-  <a href='/users/<%= @user.id %>/posts/new'>Add............</a>
+  <%= render partial: 'partials/user', locals: { user: @user }  %> <br>
+  <a href='/users/<%= @user.id %>/posts/new' class = 'create_post'> CREATE POST</a>
   
-  <div>
+  <div class='user_bio'>
     <% if @user.Bio %>
-    <h2 class='user_bio'>Bio</h2>
+    <h2 class='bio_head'>Bio</h2>
       <p><%= @user.Bio %></p>
     <% else %>
-      <h2 class='user_bio'>Bio</h2>
+      <h2 class='bio_head'>Bio</h2>
       <p>No Bio entered</p>
     <% end %>
   </div>
   <ul class=''>
     <% @user1 = User.find(@user.id) %>
     <% @user.recent_posts.each do |post| %>
-         <li>
+         <li class='post_cont'>
            <%= render partial: 'partials/post', locals: { post: post } %>
          </li>      
     <% end %>

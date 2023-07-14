@@ -1,0 +1,36 @@
+<section class="signup_userlogin">
+<h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="userloginfield">
+   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <%= f.label :email, style: 'display: none' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'login_signup_field'  %>
+  </div>
+  <br>
+
+  <div class="userloginfield">
+    <%= f.label :password, style: 'display: none' %><br />
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password',class: 'login_signup_field' %>
+  </div>
+  <br><br>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+  <br>
+
+  <section class="actions">
+    <%= f.submit "Log in", class: 'login_signup_btn'  %>
+  </div>
+<% end %> 
+<br>
+<br>
+
+<%= render "devise/shared/links" %>
+
+</section>
