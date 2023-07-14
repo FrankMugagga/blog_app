@@ -19,7 +19,9 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 20px;
-}.Comment,
+}
+
+.Comment,
 .create_new_post,
 .signup_userlogin {
   padding: 10px;
@@ -167,7 +169,9 @@ li {
 
 .comment_text {
   background: rgb(115, 179, 228);
-}.post_like_comment,
+}
+
+.post_like_comment,
 .post_det {
   display: flex;
   justify-content: space-between;
@@ -177,8 +181,6 @@ li {
   background: rgb(54, 54, 62);
 }
 
-.pos{
+.pos {
   border: 2px solid white;
 }
-
-
