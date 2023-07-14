@@ -14,6 +14,13 @@
    </div>
   <div>
 
+  
+   <% if can? :destroy, @post %>
+    <%= link_to 'DELETE POST', polymorphic_url([@post.author, @post]), data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"} %>
+    <% end %>
+
   <%= form_with url: user_post_likes_path(current_user, @post), method: :post do |form| %>
     <%= form.hidden_field :authenticity_token, value: form_authenticity_token %>
     <%= form.submit "Add Likes", class: 'btn_add_likes' %>
