@@ -14,6 +14,15 @@ class Ability
     can :create, Like
     return unless user.admin?
     
+    can :manage, :all
+    can :manage, User, id: user.id
+    can :manage, Post, author_id: user.id
+    can :manage, Comment, author_id: user.id
+    can :create, Like
+    
+    return unless user.admin?
+
+    can :manage, :all
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
