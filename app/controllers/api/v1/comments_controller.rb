@@ -1,4 +1,7 @@
 class Api::V1::CommentsController < ApplicationController
+  before_action :set_user_and_post
+  load_and_authorize_resource
+
   def index
     user = User.find(params[:user_id])
     post = user.posts.find(params[:post_id])
@@ -14,23 +17,25 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
-    user = User.find(params[:user_id])
-    post = user.posts.find(params[:post_id])
-    comment = post.comments.build(comment_params)
-    comment.author_id = current_user.id
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.build(comment_params)
+    @comment.author_id = current_user.id
 
-    if comment.save
-      render json: { success: true, message: 'Comment successfully created', comment: comment }, status: :created
+    if @comment.save
+      render json: { message: 'Comment was successfully created.' }, status: :created
     else
-      render json: { errors: comment.errors.full_message }, status: :unprocessable_entity
+      render json: { errors: @comment.errors.full_messages }, status: :unprocessable_entity
     end
-  rescue ActiveRecord::RecordNotFound
-    render json: { error: 'User or post not found' }, status: :not_found
   end
 
   private
 
+  def set_user_and_post
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:post_id])
+  end
+
   def comment_params
-    params.permit(:data)
+    params.require(:comment).permit(:text)
   end
 end
