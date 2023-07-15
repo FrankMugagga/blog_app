@@ -1,3 +1,4 @@
+<section class='create_new_post'>
 <h1>Create a new post</h1>
 <%= form_with model: @post, url: user_posts_path(@user), method: :post do |f| %>
 
@@ -10,7 +11,8 @@
       <%= f.label :text %>
       <%= f.text_area :text, required: true, class: 'post_text', placeholder: 'Write your text ...' %>
     </div>
-    <%= f.submit 'Create Post' %>
+    <br>
+    <%= f.submit 'Create Post', class: 'login_signup_btn' %>
   </div>
 
   <% if flash[:error] %>
@@ -20,3 +22,6 @@
   </div>
   <% end %>
 <% end %>
+
+
+</section>

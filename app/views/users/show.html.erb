@@ -1,8 +1,11 @@
+<section class="user_show">
 
 <h1>Hello <%= @user.Name %>' last three posts</h1>
 <div class='user_det'>
   <%= render partial: 'partials/user', locals: { user: @user }  %> <br>
   <a href='/users/<%= @user.id %>/posts/new' class = 'create_post'> CREATE POST</a>
+  </br>
+  </br>
   
   <div class='user_bio'>
     <% if @user.Bio %>
@@ -16,7 +19,7 @@
   <ul class=''>
     <% @user1 = User.find(@user.id) %>
     <% @user.recent_posts.each do |post| %>
-         <li class='post_cont'>
+         <li>
            <%= render partial: 'partials/post', locals: { post: post } %>
          </li>      
     <% end %>
@@ -25,3 +28,4 @@
   <a href='/users/<%= @user.id %>/posts' class="more_posts">See more posts </a>
   
 </div>
+</section>

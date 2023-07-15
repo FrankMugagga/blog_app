@@ -1,23 +1,37 @@
+<div class="postshow">
+
 <h1>Post details</h1>
 <div class='post_detail'>
-  <h1>Post Title: <%= @post.title %> </h1>
-  <div>
-   <div>
+ 
+  <div class='pos'>
+   <div class='post_det'>
      <div>Post <%= @post.id %> by <%= @post.author.Name %></div>
-     <div>
+     <div class="post_like_comment">
        <div>Comments: <%=@post.comments_counter %></div>
-       <div>Likes: <%=@post.likes_counter %></div>
+       <div class='like '>Likes: <%=@post.likes_counter %></div>
      </div>
    </div>
+   <br>
    <div class='post_text'>
      <%= @post.text %>
-   </div>
-  <div>
+  </div>  
+
+  <br>
+
+</div>
+
+<br>
+
+  <% if can? :destroy, @post %>
+    <%= link_to 'DELETE POST', polymorphic_url([@post.author, @post]), data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"} %>
+    <% end %>
 
   <%= form_with url: user_post_likes_path(current_user, @post), method: :post do |form| %>
     <%= form.hidden_field :authenticity_token, value: form_authenticity_token %>
     <%= form.submit "Add Likes", class: 'btn_add_likes' %>
-<% end %>
+  <% end %>
   
   <% commentpost = @post.comments %>
   <%= render partial: 'partials/comment', locals: { comment: commentpost }%>
@@ -25,4 +39,6 @@
   <a href='/users/<%= @user.id %>/posts/<%= @post.id %>/comments/new' class='post_cont'>Add Comment</a>
   <a href='/users/<%= @user.id %>/posts/new' class = 'create_post'>CREATE POST</a>
   
-</div>
+
+
+

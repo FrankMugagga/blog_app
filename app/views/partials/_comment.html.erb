@@ -1,8 +1,15 @@
+
 <% if comment.present? %>
   <div class='comments_cont'>
     <% comment.each do |c| %>
       <p class='comment_text'>
-        <%= c.user.Name %>: <%= c.text %><br>
+        <%= c.user.Name %>: <%= c.text %><br>     
+
+        <% if can? :destroy, c %>
+         <%= button_to 'Delete', polymorphic_url([c.post.author, c.post, c]), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+
+
       </p>
     <% end %>
   </div>

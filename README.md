@@ -63,9 +63,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-💻 Video Presentation <a name="video-project-presentation"></a>
-
-- [Video link]()
 <!---pending->
 
 <!-- LIVE DEMO -->

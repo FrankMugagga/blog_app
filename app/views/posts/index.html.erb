@@ -1,7 +1,9 @@
+
+<section class="postsindex">
 <h1>All posts</h1>
 <div class='post_index'>
   <%= render partial: 'partials/user', locals: { user: @user } %>
-  
+  <br>
   <% Post.includes(:comments).each do |post| %>
     <%= render partial: 'partials/post', locals: { post: post } %>
     
@@ -12,3 +14,5 @@
 
   <button type="button" class="btn btn-outline-dark">PAGINATION</button>
 </div>
+
+</section>

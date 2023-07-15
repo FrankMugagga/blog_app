@@ -1,6 +1,10 @@
+<section class='Comment'>
 <h2>Create a Comment</h2>
 
 <%= form_with(model: [@user, @post, @comment], url: user_post_comments_path(@user, @post), method: :post) do |form| %>
-  <%= form.text_area :text, placeholder: 'Enter your comment' %>
-  <%= form.submit 'Create Comment' %>
+  <%= form.text_area :text, placeholder: 'Enter your comment', class: 'post_text' %>
+  <%= form.submit 'Create Comment', class: 'login_signup_btn' %>
 <% end %>
+
+
+</section>
