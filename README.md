@@ -57,9 +57,7 @@
 - Add forms
 - Integration specs for views and fix n+1 problems
 - Add devise
-
-
-
+- Add API endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +115,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[add authorization rules]**
+- [ ] **[Deploy]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
