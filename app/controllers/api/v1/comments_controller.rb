@@ -13,6 +13,12 @@ class Api::V1::CommentsController < ApplicationController
     render json: { error: 'User, post, or comments not found' }, status: :not_found
   end
 
+  def create
+    user = User.find(params[:user_id])
+    post = user.posts.find(params[:post_id])
+    comment = post.comments.build(comment_params)
+    comment.author_id = current_user.id
+
   private
 
   def comment_params
